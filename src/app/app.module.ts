@@ -22,6 +22,8 @@ import { ImageFourComponent } from './gallery/image-four/image-four.component';
 import { LoginComponent } from './login/login.component';
 import { GalleryItemComponent } from './gallery-item/gallery-item.component';
 import { ProductsItemComponent } from './products-item/products-item.component';
+import { DropDownDirective } from './appDirective/drop-down.directive';
+import { SharedModuleModule } from './sharedModules/shared-module.module';
 
 @NgModule({
   declarations: [
@@ -44,6 +46,7 @@ import { ProductsItemComponent } from './products-item/products-item.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    ProductsModule
   ],
   providers: [
     HeaderServiceService,

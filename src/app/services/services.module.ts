@@ -1,3 +1,4 @@
+import { SharedModuleModule } from '../sharedModules/shared-module.module';
 import { Router, RouterModule, Routes } from '@angular/router';
 import { NgModule, Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
@@ -6,6 +7,7 @@ import { GraphicsComponent } from './graphics/graphics.component';
 import { VfxComponent } from './vfx/vfx.component';
 import { VideoComponent } from './video/video.component';
 import { UiuxComponent } from './uiux/uiux.component';
+import { DropDownDirective } from '../appDirective/drop-down.directive';
 
 const routes: Routes = [
   { path: 'services', children:[
@@ -24,11 +26,12 @@ const routes: Routes = [
     GraphicsComponent,
     VfxComponent,
     VideoComponent,
-    UiuxComponent
+    UiuxComponent,
   ],
   imports: [
     CommonModule,
     RouterModule.forChild(routes),
+    SharedModuleModule
   ]
 })
 export class ServicesModule { }

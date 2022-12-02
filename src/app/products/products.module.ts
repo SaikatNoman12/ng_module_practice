@@ -1,3 +1,4 @@
+import { SharedModuleModule } from './../sharedModules/shared-module.module';
 import { WashingMachineComponent } from './washing-machine/washing-machine.component';
 import { TvComponent } from './tv/tv.component';
 import { MobileComponent } from './mobile/mobile.component';
@@ -26,11 +27,12 @@ const router: Routes = [
     LaptopComponent,
     MobileComponent,
     TvComponent,
-    WashingMachineComponent
+    WashingMachineComponent,
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild(router)
+    RouterModule.forChild(router),
+    SharedModuleModule
   ]
 })
 export class ProductsModule { }

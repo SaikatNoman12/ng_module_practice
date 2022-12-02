@@ -46,7 +46,7 @@ const routes: Routes = [
   imports: [
     RouterModule.forRoot(routes),
     ServicesModule,
-    ProductsModule
+    ProductsModule,
   ],
   exports: [RouterModule,]
 })
