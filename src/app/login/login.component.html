@@ -1,0 +1,39 @@
+  <br />
+  <br />
+  <div class="container border p-3 pb-5 text-center rounded w-50 shadow">
+    <div class="logo">
+      <h2>{{ "logo" | uppercase }}</h2>
+    </div>
+
+    <div class="sign-in-text">
+      <p>{{ "Please Sign In" | titlecase }}</p>
+    </div>
+
+    <form class="mx-auto" (submit)="onSubmitForm($event)">
+      <input
+        type="text"
+        placeholder="username"
+        class="form-control"
+        name="uname"
+      />
+
+      <br />
+
+      <input
+        type="password"
+        placeholder="password"
+        class="form-control"
+        name="pass"
+      />
+
+      <div class="check-box">
+        <input type="checkbox" id="checked" name="checkData" />
+        <label for="checked">Remember me (admin)</label>
+      </div>
+
+      <button class="btn btn-primary px-4" type="submit">
+        {{ "submit" | uppercase }}
+      </button>
+    </form>
+  </div>
+

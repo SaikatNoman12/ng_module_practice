@@ -1,0 +1,53 @@
+<div class="container border p-3">
+  <div class="left-right">
+    <div class="title">
+      <h1 class="m-0">{{ "Services" | uppercase }}</h1>
+    </div>
+
+    <div class="info-data">
+      <p>
+        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consectetur
+        eligendi ab a voluptate esse? Porro iusto explicabo praesentium
+        repudiandae aperiam iure nulla magni earum saepe, quod eveniet dolores
+        non? Perspiciatis consectetur maiores vel possimus aliquam consequatur
+        quasi amet magnam totam voluptate delectus illum natus, nisi quae sequi
+        distinctio.
+      </p>
+    </div>
+
+    <br />
+
+    <div class="cards">
+      <ng-container *ngFor="let product of products">
+        <div class="card border rounded">
+          <div class="image">
+            <img
+              class="img-fluid"
+              src="{{ product.img }}"
+              alt="{{ product.name }}"
+            />
+          </div>
+          <div class="card-info">
+            <h6>{{ product.name }}</h6>
+            <p>
+              {{ product.inData }}
+            </p>
+          </div>
+          <div class="card-btn">
+            <button
+            routerLink="{{product.router}}"
+              class="btn btn-success px-3"
+            >
+              Show More
+            </button>
+          </div>
+        </div>
+      </ng-container>
+    </div>
+  </div>
+</div>
+
+<br />
+<br />
+<br />
+<br />

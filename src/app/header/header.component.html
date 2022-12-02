@@ -1,0 +1,59 @@
+<div
+  class="container p-4 border border-bottom-0 d-flex justify-content-between align-items-center"
+  *ngIf="headerShow"
+>
+  <div class="logo">
+    <h2 class="m-0">
+      <a href="#">{{ "Logo" | uppercase }}</a>
+    </h2>
+    <ng-container *ngIf="goBack.text">
+      <div class="back-route">
+        <a class="back-routing" href="#" routerLink="./{{ goBack.router }}"
+          ><i class="fas fa-chevron-left"></i> {{ goBack.text }}
+        </a>
+      </div>
+    </ng-container>
+  </div>
+
+  <ng-container *ngIf="!goBack.text">
+    <div class="header-item">
+      <app-header-item></app-header-item>
+    </div>
+  </ng-container>
+
+  <ng-container *ngIf="headerLogin">
+    <ng-container *ngIf="!headerLogInBack">
+      <div class="sign-in-btn">
+        <button class="btn btn-outline-primary px-4" type="button" (click)="signInData()">
+          Sign In
+        </button>
+      </div>
+    </ng-container>
+
+    <ng-container *ngIf="headerLogInBack">
+      <div class="log-name">
+        <h6 class="m-0">
+          Welcome <strong class="text-primary">{{ headerLogInBack }}</strong>
+        </h6>
+        <div class="log-out">
+          <button class="btn" (click)="onLogOut()">
+            <i class="fas fa-unlock-alt"></i>
+            <span>logout</span>
+          </button>
+        </div>
+      </div>
+    </ng-container>
+  </ng-container>
+
+  <div class="em-ph" *ngIf="headerContactDetails">
+    <h6>
+      <i class="fas fa-envelope text-primary"></i>
+      <span>abcdef@gmail.com</span>
+    </h6>
+    <h6 class="m-0">
+      <!-- <i class="fas fa-phone-alt"></i> -->
+      <span [style]="dataStyle">Ph</span>
+      <span>(000) 01234567891</span>
+    </h6>
+  </div>
+</div>

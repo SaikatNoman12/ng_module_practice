@@ -1,0 +1,43 @@
+.logo {
+  margin-top: 30px;
+  padding: 0px 28px;
+  display: inline-block;
+  margin-bottom: 30px;
+}
+
+.logo h2 {
+  font-size: 80px;
+  margin: 0;
+}
+
+.sign-in-text {
+  margin-bottom: 26px;
+}
+
+.sign-in-text p {
+  font-size: 22px;
+  color: gray;
+}
+
+form {
+  width: 400px;
+}
+
+.check-box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 20px 0px;
+}
+
+.check-box input {
+  height: 16px;
+  width: 16px;
+}
+
+.check-box label {
+  margin-left: 6px;
+  font-size: 17px;
+  color: #333;
+  font-weight: 400;
+}

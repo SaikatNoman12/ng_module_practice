@@ -1,0 +1,68 @@
+.left-right {
+    text-align: center;
+  }
+  
+  .title {
+    margin-top: 24px;
+    margin-bottom: 30px;
+    border-left: 5px solid blue;
+    border-right: 5px solid blue;
+    display: inline-block;
+  }
+  
+  .title h1 {
+    font-size: 50px;
+    font-weight: 400;
+    padding-left: 18px;
+    padding-right: 18px;
+    color: #333;
+  }
+  
+  .info-data p {
+    font-size: 18px;
+    color: rgb(91, 91, 91);
+    text-align: center;
+    font-weight: 400;
+  }
+  
+  .cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+  }
+  
+  .card {
+    overflow: hidden;
+    padding: 10px;
+  }
+  
+  .card .image {
+    border-radius: 8px;
+    overflow: hidden;
+    height: 200px;
+  }
+  
+  .card .image img {
+    width: 100%;
+    object-fit: cover;
+    height: 100%;
+  }
+  
+  .card-info {
+    margin-top: 18px;
+  }
+  .card-info h6 {
+    margin-bottom: 8px;
+    font-size: 20px;
+    font-weight: 500;
+    color: rgb(59, 59, 59);
+  }
+  .card-info p {
+    margin-top: 12px;
+    margin-bottom: 20px;
+    font-size: 15px;
+    font-weight: 400;
+    color: gray;
+    text-align: justify;
+  }
+  
