@@ -9,14 +9,11 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 const router: Routes = [
-  {
-    path: '', component: ProductsComponent, children: [
-      { path: 'laptop', component: LaptopComponent },
-      { path: 'mobile', component: MobileComponent },
-      { path: 'washing-machine', component: WashingMachineComponent },
-      { path: 'tv', component: TvComponent },
-    ]
-  },
+  { path: '', component: ProductsComponent, },
+  { path: 'laptop', component: LaptopComponent },
+  { path: 'mobile', component: MobileComponent },
+  { path: 'washing-machine', component: WashingMachineComponent },
+  { path: 'tv', component: TvComponent },
 ]
 
 
