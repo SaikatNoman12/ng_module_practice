@@ -10,14 +10,11 @@ import { UiuxComponent } from './uiux/uiux.component';
 import { DropDownDirective } from '../appDirective/drop-down.directive';
 
 const routes: Routes = [
-  {
-    path: '', component: ServicesComponent, children: [
-      { path: 'uiux', component: UiuxComponent },
-      { path: 'video', component: VideoComponent },
-      { path: 'vfx', component: VfxComponent },
-      { path: 'graphics', component: GraphicsComponent },
-    ]
-  }
+  { path: '', component: ServicesComponent },
+  { path: 'uiux', component: UiuxComponent },
+  { path: 'video', component: VideoComponent },
+  { path: 'vfx', component: VfxComponent },
+  { path: 'graphics', component: GraphicsComponent },
 ];
 
 
