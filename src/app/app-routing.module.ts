@@ -25,6 +25,13 @@ const routes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'home', component: HomeComponent },
   { path: 'about', component: AboutUsComponent },
+  {
+    path: 'products',
+    loadChildren: () => import('./products/products.module')
+      .then(m => m.ProductsModule)
+  },
+
+  // () => import('./customers/customers.module').then(m => m.CustomersModule)
   // {
   //   path: 'gallery', children: [
   //     { path: '', component: GalleryComponent },
@@ -38,6 +45,11 @@ const routes: Routes = [
   { path: 'gallery/:id', component: GalleryItemComponent },
   // { path: 'products', component: ProductsComponent },
   // { path: 'products/:productId', component: ProductsItemComponent },
+  {
+    path: 'services',
+    loadChildren: () => import('./services/services.module')
+      .then(m => m.ServicesModule)
+  },
   { path: 'contact', component: ContactUsComponent },
   { path: '**', component: ErrorComponent }
 ]
@@ -45,8 +57,6 @@ const routes: Routes = [
 @NgModule({
   imports: [
     RouterModule.forRoot(routes),
-    ServicesModule,
-    ProductsModule,
   ],
   exports: [RouterModule,]
 })

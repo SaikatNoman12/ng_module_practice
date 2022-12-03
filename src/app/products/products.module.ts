@@ -10,8 +10,7 @@ import { CommonModule } from '@angular/common';
 
 const router: Routes = [
   {
-    path: 'products', children: [
-      { path: '', component: ProductsComponent },
+    path: '', component: ProductsComponent, children: [
       { path: 'laptop', component: LaptopComponent },
       { path: 'mobile', component: MobileComponent },
       { path: 'washing-machine', component: WashingMachineComponent },
@@ -35,4 +34,11 @@ const router: Routes = [
     SharedModuleModule
   ]
 })
-export class ProductsModule { }
+export class ProductsModule {
+
+
+  constructor() {
+    console.log('products loaded');
+  }
+
+}

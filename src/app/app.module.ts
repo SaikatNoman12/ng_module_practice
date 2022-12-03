@@ -46,7 +46,6 @@ import { SharedModuleModule } from './sharedModules/shared-module.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ProductsModule
   ],
   providers: [
     HeaderServiceService,
@@ -55,4 +54,10 @@ import { SharedModuleModule } from './sharedModules/shared-module.module';
   ],
   bootstrap: [AppComponent]
 })
-export class AppModule { }
+export class AppModule { 
+
+  constructor(){
+    console.log('app loaded');
+  }
+
+}

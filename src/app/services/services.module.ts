@@ -10,13 +10,14 @@ import { UiuxComponent } from './uiux/uiux.component';
 import { DropDownDirective } from '../appDirective/drop-down.directive';
 
 const routes: Routes = [
-  { path: 'services', children:[
-    {path:'', component:ServicesComponent},
-    {path:'uiux', component:UiuxComponent},
-    {path:'video', component:VideoComponent},
-    {path:'vfx', component:VfxComponent},
-    {path:'graphics', component:GraphicsComponent},
-  ]}
+  {
+    path: '', component: ServicesComponent, children: [
+      { path: 'uiux', component: UiuxComponent },
+      { path: 'video', component: VideoComponent },
+      { path: 'vfx', component: VfxComponent },
+      { path: 'graphics', component: GraphicsComponent },
+    ]
+  }
 ];
 
 
@@ -34,4 +35,10 @@ const routes: Routes = [
     SharedModuleModule
   ]
 })
-export class ServicesModule { }
+export class ServicesModule {
+
+  constructor() {
+    console.log('services loaded');
+  }
+
+}
