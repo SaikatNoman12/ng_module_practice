@@ -1,3 +1,4 @@
+import { CustomPreloadingService } from './appService/custom-preloading.service';
 import { ProductsModule } from './products/products.module';
 import { ServicesModule } from './services/services.module';
 import { ProductsItemComponent } from './products-item/products-item.component';
@@ -27,11 +28,10 @@ const routes: Routes = [
   { path: 'about', component: AboutUsComponent },
   {
     path: 'products',
+    data: { preload: true },
     loadChildren: () => import('./products/products.module')
       .then(m => m.ProductsModule)
   },
-
-  // () => import('./customers/customers.module').then(m => m.CustomersModule)
   // {
   //   path: 'gallery', children: [
   //     { path: '', component: GalleryComponent },
@@ -47,6 +47,7 @@ const routes: Routes = [
   // { path: 'products/:productId', component: ProductsItemComponent },
   {
     path: 'services',
+    data: { preload: true },
     loadChildren: () => import('./services/services.module')
       .then(m => m.ServicesModule)
   },
@@ -57,7 +58,7 @@ const routes: Routes = [
 @NgModule({
   imports: [
     RouterModule.forRoot(routes, {
-      preloadingStrategy: PreloadAllModules
+      preloadingStrategy: CustomPreloadingService
     }),
   ],
   exports: [RouterModule,]
